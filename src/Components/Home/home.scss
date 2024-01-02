@@ -1,0 +1,229 @@
+:root{
+    --PrimaryColor: hsl(199, 100%, 33%);
+    --SecondaryColor:  hsl(187, 85%, 43%);
+    --gradientColor: linear-gradient(to right , hsl(187, 85%, 43%) , hsl(199, 100%, 33%));
+    --whiteColor: hsl(0, 0%, 100%);
+    --BlackColor: hsl(201, 33%, 16%);
+    --textColor: hsl(240, 3%, 47%);
+    --whiteColorDeam: hsl(0, 0%, 93%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: rgb(215, 215, 215);
+    --bodyColor: rgb(240, 240, 246);
+    --cardBG: rgb(225, 225, 235);
+  }
+ 
+  .Home {
+    width: 100%;
+    height: 120vh;                   /* Set height to 100% of the viewport height */
+    position: relative;
+    display: flex;
+    align-items: stretch;            /* Stretch items vertically to fill the container */
+    justify-content: stretch;        /* Stretch items horizontally to fill the container */
+    margin: auto;
+      
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);     /* Adjust the overlay color and transparency */
+        z-index: 1;
+    }
+      
+      video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;      
+        object-fit :cover;                   /* Maintain aspect ratio and cover the container */                
+      }
+      
+      .homeContent{
+        width: 100%;
+        height: max-content;
+        display: flex;
+        row-gap: 3rem;
+        flex-direction: column;
+        align-items: stretch;                   //การทำให้สิ่งต่างๆ fitและไปด้วยกันกับหน้ากระดาษ 
+        justify-content: center;        
+        margin: auto;
+        color: var(--whiteColor);
+        padding: 0 30px 0 30px;
+        z-index: 100;
+
+      .textDiv {
+       padding: 8.5rem .8rem 3.5rem;
+       
+
+      .smallText {
+        font-size: 13px;
+        text-transform: uppercase;
+      }
+      
+      .homeTitle {
+        position: relative;
+        font-size: 30px;
+        font-weight: 600;
+    //   white-space: nowrap;      /* Prevent line breaks */
+    
+     }
+  }
+ }
+
+    .cardDiv-grid{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: .1rem 0 2.2rem -1rem; 
+        background: var(--whiteColor);
+        border-radius: 14px;
+        margin: auto;           /* Center horizontally */
+
+        label{
+            display: block;
+            color: var(--textColor);
+            padding: 9px 0 8px;
+            margin-top: 1rem;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+         
+
+          .label-total-flex{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+
+            .total{
+              font-weight: 600;
+              color: var(--textColor);
+              padding-bottom: 10px;
+              color: var(--textColor);
+              display: inline-block;
+              transform: translateY(16px); 
+            }
+          }
+
+          .rangedesign {
+            width: 50%;
+            height: 1rem;
+            border: 3px solid black;
+            border-radius: 6px;
+          
+        }
+
+        .input-flex{
+          display: flex;
+          align-items: center;
+          height: 40px;
+          padding: 0rem 2rem;
+          margin-top: .6rem;
+          background: rgb(214, 214, 214);
+          border-radius: 1rem;
+
+          input {
+            background:none;
+            border: none;
+            outline: none;
+            font-size: 13.5px; 
+            color:  hsl(0, 0%, 48%); 
+            flex: 1;                 /* This makes the input take up the available space */
+            &::placeholder {
+              font-size: 13.5px;
+              color: hsl(0, 0%, 48%); 
+            }                     
+          }
+
+        .icon {
+          font-size: 17.5px;
+          stroke-width: .5px;
+          transform: translate(3px );
+          color: black;
+         }
+
+         .input[type=range]{
+          background: blue;
+         }
+        }
+
+        .searchOption{ 
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position:relative;
+          background: var(--gradientColor);
+          width: max-content;
+          bottom: -1rem;
+          column-gap: 0.5rem;               //gap between icon and text
+          padding: 6px 1rem;
+          border-radius: 4rem;
+          left: 50%;
+          transform: translate(-50%);
+          &:hover {
+            background: var(--PrimaryColor);
+          }
+
+          span {
+            font-size: 14.5px;
+            font-weight: 500;
+          }
+
+          .icon {
+            font-size: 17px;
+
+          }
+        }
+      }
+ 
+      .homeFooeterIcon-flex {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: .7rem;
+
+
+        .icon{
+          font-size: 20px;
+          margin: 0 6px;
+          color: var(--whiteColor);
+          font-weight: 600;
+          &:hover {
+            color: var(--SecondaryColor);
+          }
+
+        }
+      }
+
+}
+
+//Media Queries====================> 
+
+ @media screen and (min-width: 500px) {
+    .Home{
+      .homeContent {
+        .textDiv {
+          .smallText {
+            font-size: 16px;
+          }
+          .homeTitle{
+             position: relative;
+             font-size: 2.3rem;
+             width: max-content;
+
+        
+          }
+
+      }
+    }
+
+  
+ }
+}      
+  
+  
+ 
